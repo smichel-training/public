@@ -59,8 +59,10 @@ if ($keepMSGraphSession -eq "n") {
 }
 
 # Retrieve the service principal for Microsoft Graph using its AppId
+# Usefull AppId 
+# Microsoft Graph : 00000003-0000-0000-c000-000000000000
+# Office 365 Exchange Online : 00000002-0000-0ff1-ce00-000000000000
 $MSGraphSP = Get-MgServicePrincipal -Filter "AppId eq '00000003-0000-0000-c000-000000000000'"
-$MSGraphSP
 
 # Retrieve information about the specified Managed Identity (MI)
 $MSI = Get-MgServicePrincipal -Filter "DisplayName eq '$MSIName'" 
